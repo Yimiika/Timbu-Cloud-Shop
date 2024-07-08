@@ -1,0 +1,39 @@
+.productimage {
+  display: flex;
+  height: 372px;
+  margin-top: 75px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.productdisplay-img-left {
+  flex: 2;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.productdisplay-img-right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.productdisplay-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productdisplay-img-right img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .productimage {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
