@@ -8,6 +8,7 @@ import { Footer } from "./Components/Footer/Footer";
 import { NewsLetter } from "./Components/NewsLetter/NewsLetter";
 import { FooterAddition } from "./Components/FooterAddition/FooterAddition";
 import { CheckOutMobile } from "./Pages/CheckOutMobile";
+import { NewsLetterMobile } from "./Components/NewsLetterMobile/NewsLetterMobile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <NewsLetter />
         <Footer />
         <FooterAddition />
+        <NewsLetterMobile />
       </BrowserRouter>
     </div>
   );
