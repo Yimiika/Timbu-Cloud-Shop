@@ -7,6 +7,8 @@ import cart_small_icon from "../Assets/cart_small_icon.svg";
 
 export const ProductDisplay = (props) => {
   const { product } = props;
+  const discount =
+    props.discount !== undefined ? Math.round(props.discount) : 0;
   const { addToCart } = useContext(ShopContext);
   return (
     <div className="productdisplay">
@@ -40,7 +42,6 @@ export const ProductDisplay = (props) => {
             <div>By Color</div>
             <div>Buy Now With Tags</div>
           </div>
-          <hr />
           <div className="productdisplay-left-prices">
             <div className="productdisplay-left-price-new">
               N{product.new_price}
@@ -48,6 +49,7 @@ export const ProductDisplay = (props) => {
             <div className="productdisplay-left-price-old">
               N{product.old_price}
             </div>
+            {discount !== 0 && <div className="discount-rate">{discount}%</div>}
           </div>
           <button
             onClick={() => {
@@ -57,7 +59,7 @@ export const ProductDisplay = (props) => {
             Buy Now
           </button>
           <div className="product-display-left-category">
-            <p className="productdisplay-left-category">
+            <p className="productdisplay-left-category heart-display">
               <img className="heart-icon" src={heart_icon} alt="heart-icon" />
               Like and save for later
             </p>
@@ -102,7 +104,7 @@ export const ProductDisplay = (props) => {
           <p>
             <ul>
               <li>
-                -Eye-Catching Design: The vibrant red hue is perfect for making
+                - Eye-Catching Design: The vibrant red hue is perfect for making
                 a bold fashion statement.
               </li>
               <li>

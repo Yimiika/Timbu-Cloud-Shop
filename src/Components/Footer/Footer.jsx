@@ -5,6 +5,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-address">
+        <h5 className="heading">Get to Us</h5>
         <p>Visit us at Shop F19/23, Road 3, Ikota</p>
         <p>Shopping Complex, VGC, Lekki-Epe</p>
         <p>Expressway, Lagos, Nigeria</p>
@@ -41,8 +42,15 @@ export const Footer = () => {
             <li>FAQs</li>
           </ul>
         </div>
+        <div className="footer-social">
+          <ul>
+            <li className="heading">Social</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
       </div>
-      <hr />
     </div>
   );
 };

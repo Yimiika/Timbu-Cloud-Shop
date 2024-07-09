@@ -9,11 +9,13 @@ export const NewsLetter = () => {
           <h3>Fear Of Missing Out?</h3>
           <p>Get the latest deals, updates and more</p>
         </div>
-        <div className="newsletter-input">
-          <input type="email" placeholder="Your Email address" />
-        </div>
-        <div className="newsletter-button">
-          <button>Subscribe Now</button>
+        <div className="newsletter-right">
+          <div className="newsletter-input">
+            <input type="email" placeholder="Your Email address" />
+          </div>
+          <div className="newsletter-button">
+            <button>Subscribe Now</button>
+          </div>
         </div>
       </div>
       <hr />
