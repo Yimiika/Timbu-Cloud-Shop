@@ -47,11 +47,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .item-price-new {
   color: var(--Default-Body, #190028);
   font-style: normal;
+  font-size: 14px;
   font-weight: 700;
   line-height: 120%;
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import { PaymentPopup } from "../PaymentPopup/PaymentPopup";
@@ -15,13 +15,31 @@ export const CartItems = () => {
   } = useContext(ShopContext);
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
 
+  const isLargeScreen = () => {
+    return window.innerWidth >= 768;
+  };
+
   const handleBuyNow = () => {
-    setIsPopUpVisible(true);
+    if (isLargeScreen()) {
+      setIsPopUpVisible(true);
+    } else {
+      window.location.href = "/checkoutmobile";
+    }
   };
 
   const closePopUp = () => {
     setIsPopUpVisible(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPopUpVisible(isPopUpVisible);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isPopUpVisible]);
 
   return (
     <div className="cart">
@@ -89,7 +107,7 @@ export const CartItems = () => {
                     <div className="cart-items-mobile">
                       <div className="cart-mobile-details">
                         <p>{e.name}</p>
-                        <div className="cart-items-sizes">
+                        <div className="cart-items-sizes ">
                           <p className="cart-items-sizes-text">Sizes</p>
                           <div>S</div>
                           <div>M</div>

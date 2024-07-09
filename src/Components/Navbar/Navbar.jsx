@@ -25,10 +25,10 @@ export const Navbar = () => {
             placeholder="Search all products"
           />
           <div className="nav-icons">
-            <Link to="/messages">
+            <Link>
               <img src={message_icon} alt="" />
             </Link>
-            <Link to="/likes">
+            <Link>
               <LikeIcon />
             </Link>
             <Link to="/cart" className="cart-icon-container">

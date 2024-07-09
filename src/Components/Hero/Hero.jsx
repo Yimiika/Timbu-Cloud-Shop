@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import hero_image from "../Assets/hero_image.png";
 
-export const Hero = () => {
+export const Hero = ({ scrollToProducts }) => {
   return (
     <>
       <div className="hero">
@@ -13,7 +13,9 @@ export const Hero = () => {
             <p>Elevate Your Style with Our Bold Red Jacket</p>
           </div>
           <div className="hero-latest-btn">
-            <button className="hero-button">Shop Now</button>
+            <button className="hero-button" onClick={scrollToProducts}>
+              Shop Now
+            </button>
           </div>
         </div>
       </div>
@@ -28,7 +30,9 @@ export const Hero = () => {
             <p>Elevate Your Style with Our Bold Red Jacket</p>
           </div>
           <div className="hero-latest-btn">
-            <button className="hero-button">Shop Now</button>
+            <button className="hero-button" onClick={scrollToProducts}>
+              Shop Now
+            </button>
           </div>
         </div>
       </div>

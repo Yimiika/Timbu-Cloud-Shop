@@ -16,15 +16,14 @@ export const PaymentPopup = ({ closePopUp }) => {
                 name="payment-option"
                 value="transfer"
                 defaultChecked
-              />
+              />{" "}
               Card
             </label>
             <label>
-              <input type="radio" name="payment-option" value="card" />
-              Bank
+              <input type="radio" name="payment-option" value="card" /> Bank
             </label>
             <label>
-              <input type="radio" name="payment-option" value="bankTransfer" />
+              <input type="radio" name="payment-option" value="bankTransfer" />{" "}
               Transfer
             </label>
           </div>

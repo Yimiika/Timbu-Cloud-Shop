@@ -7,6 +7,7 @@ import { Cart } from "./Pages/Cart";
 import { Footer } from "./Components/Footer/Footer";
 import { NewsLetter } from "./Components/NewsLetter/NewsLetter";
 import { FooterAddition } from "./Components/FooterAddition/FooterAddition";
+import { CheckOutMobile } from "./Pages/CheckOutMobile";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkoutmobile" element={<CheckOutMobile />} />
         </Routes>
         <NewsLetter />
         <Footer />

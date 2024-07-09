@@ -65,6 +65,7 @@
   font-weight: 400;
   line-height: 120%;
 }
+
 .cart-items-sizes-text {
   font-size: 18px;
 }
@@ -180,6 +181,7 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .cartitems-promo {
@@ -194,6 +196,7 @@
   padding-left: 10px;
   display: flex;
   align-items: center;
+  border-radius: 4px;
 }
 
 .cartitems-promobox input {
@@ -220,8 +223,13 @@
   line-height: 120%;
   display: flex;
   padding: 10px;
+  border-radius: 4px;
   justify-content: center;
   align-items: center;
+}
+.active {
+  background-color: rgb(39, 39, 81);
+  color: #000;
 }
 
 @media (max-width: 768px) {
