@@ -121,12 +121,31 @@
   }
   .searchproducts-mobile {
     display: flex;
-    width: 80%;
+    width: 85%;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 12px 8px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid var(--Foundation-Base-B50, #c6bfc9);
+  }
+  .searchproducts-icon {
+    position: absolute;
+    padding: 5px;
+    cursor: pointer;
+    background: #9c0001;
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     padding-left: 6px;
+    padding-right: 6px;
+    align-items: center;
+    right: 13%;
+    top: 72%;
+    transform: translateY(-50%);
   }
   .test {
     display: flex;

@@ -8,6 +8,7 @@ import { LikeIcon } from "../Icons/LikeIcon";
 import { BarIcon } from "../Icons/BarIcon";
 import profile_picture from "../Assets/profilepicture.png";
 import message_icon from "../Assets/messages.svg";
+import arrow_icon from "../Assets/arrow_icon.svg";
 
 export const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
@@ -54,6 +55,9 @@ export const Navbar = () => {
             type="text"
             placeholder="Search all products"
           />
+          <div className="searchproducts-icon">
+            <img src={arrow_icon} alt="" />
+          </div>
         </div>
       </div>
     </div>
