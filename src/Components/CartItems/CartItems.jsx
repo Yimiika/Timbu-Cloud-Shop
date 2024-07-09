@@ -23,7 +23,7 @@ export const CartItems = () => {
     if (isLargeScreen()) {
       setIsPopUpVisible(true);
     } else {
-      window.location.href = "/checkoutmobile";
+      window.location.href = "/CheckOutMobile";
     }
   };
 
@@ -107,7 +107,7 @@ export const CartItems = () => {
                     <div className="cart-items-mobile">
                       <div className="cart-mobile-details">
                         <p>{e.name}</p>
-                        <div className="cart-items-sizes ">
+                        <div className="cart-items-sizes">
                           <p className="cart-items-sizes-text">Sizes</p>
                           <div>S</div>
                           <div>M</div>
