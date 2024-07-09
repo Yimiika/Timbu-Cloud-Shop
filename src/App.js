@@ -6,6 +6,7 @@ import { Product } from "./Pages/Product";
 import { Cart } from "./Pages/Cart";
 import { Footer } from "./Components/Footer/Footer";
 import { NewsLetter } from "./Components/NewsLetter/NewsLetter";
+import { FooterAddition } from "./Components/FooterAddition/FooterAddition";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </Routes>
         <NewsLetter />
         <Footer />
+        <FooterAddition />
       </BrowserRouter>
     </div>
   );
