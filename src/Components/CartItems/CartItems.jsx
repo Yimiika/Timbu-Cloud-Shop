@@ -23,7 +23,7 @@ export const CartItems = () => {
     if (isLargeScreen()) {
       setIsPopUpVisible(true);
     } else {
-      window.location.href = "/CheckOutMobile";
+      window.location.href = "/checkoutmobile";
     }
   };
 
