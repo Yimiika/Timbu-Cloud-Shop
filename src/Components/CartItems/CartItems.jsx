@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import { PaymentPopup } from "../PaymentPopup/PaymentPopup";
+import { useNavigate } from "react-router-dom";
 
 export const CartItems = () => {
   const {
@@ -14,16 +15,16 @@ export const CartItems = () => {
     clearItemFromCart,
   } = useContext(ShopContext);
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
+  const navigate = useNavigate();
 
   const isLargeScreen = () => {
     return window.innerWidth >= 768;
   };
-
   const handleBuyNow = () => {
     if (isLargeScreen()) {
       setIsPopUpVisible(true);
     } else {
-      window.location.href = "/checkoutmobile";
+      navigate("/checkoutmobile");
     }
   };
 

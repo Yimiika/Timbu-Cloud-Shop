@@ -256,6 +256,8 @@
   .cart-items-mobile {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
   }
   .cart-mobile-details {
     display: flex;
