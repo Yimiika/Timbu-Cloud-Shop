@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 60px); /* Adjust height as needed */
+  height: calc(100vh - 60px);
   background-image: url("../Assets/hero_image.png");
   background-size: cover;
   background-position: center;
@@ -79,7 +79,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* padding: 20px; Adjust padding as needed */
     width: 100%;
     height: auto;
   }

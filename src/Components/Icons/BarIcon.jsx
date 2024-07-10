@@ -1,5 +1,3 @@
-import "./BarIcon.css";
-
 export const BarIcon = () => {
   return (
     <svg

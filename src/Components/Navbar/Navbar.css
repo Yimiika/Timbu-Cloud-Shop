@@ -81,7 +81,8 @@
   cursor: pointer;
 }
 
-.searchproducts-mobile {
+.searchproducts-mobile,
+.searchproducts-icon {
   display: none;
 }
 
@@ -133,6 +134,7 @@
     border: 1px solid var(--Foundation-Base-B50, #c6bfc9);
   }
   .searchproducts-icon {
+    display: flex;
     position: absolute;
     padding: 5px;
     cursor: pointer;

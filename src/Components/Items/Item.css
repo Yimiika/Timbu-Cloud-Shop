@@ -10,7 +10,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* align-self: stretch; */
 }
 .item-image img {
   display: block;
