@@ -103,3 +103,8 @@
   font-size: 0.8rem;
   color: #888;
 }
+
+.payment-options input {
+  accent-color: #9c0001;
+  gap: 8px;
+}
