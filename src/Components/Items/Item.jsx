@@ -37,7 +37,7 @@ export const Item = (props) => {
         <div className="item-price-old">N{old_price}</div>
         {discount !== 0 && <div className="discount-rate">{discount}%</div>}
       </div>
-      <button onClick={handleAddToCart}>Add To Cart</button>
+      <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 };
