@@ -35,24 +35,24 @@
     flex-direction: column;
     gap: 20px;
     margin: 110px auto 0 auto;
+    height: 500px;
   }
   .productdisplay-img-left {
     width: 100%;
-    padding: 0px;
-    padding-right: 0px;
   }
   .productdisplay-img-left img {
     width: 100%;
+    height: 20%vh;
   }
 
   .productdisplay-main-img {
-    height: auto;
     width: 100%;
   }
   .productdisplay-img-right {
     width: 100%;
+    overflow: hidden;
   }
   .productdisplay-img-right img {
-    height: auto;
+    width: 100%;
   }
 }
