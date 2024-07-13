@@ -7,13 +7,14 @@ import cart_small_icon from "../Assets/cart_small_icon.svg";
 
 export const ProductDisplay = (props) => {
   const { product } = props;
+  console.log("log", product);
   const discount =
     props.discount !== undefined ? Math.round(props.discount) : 0;
   const { addToCart } = useContext(ShopContext);
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
-        <h1>{product.name}</h1>
+        <h1>{product?.name}</h1>
         <div className="productdisplay-left-stars">
           <div className="profile-container">
             <img
@@ -44,16 +45,16 @@ export const ProductDisplay = (props) => {
           </div>
           <div className="productdisplay-left-prices">
             <div className="productdisplay-left-price-new">
-              N{product.new_price}
+              N{product?.discounted_price}
             </div>
             <div className="productdisplay-left-price-old">
-              N{product.old_price}
+              N{product?.current_price}
             </div>
             {discount !== 0 && <div className="discount-rate">{discount}%</div>}
           </div>
           <button
             onClick={() => {
-              addToCart(product.id);
+              addToCart(product?.id);
             }}
           >
             Buy Now
@@ -66,7 +67,7 @@ export const ProductDisplay = (props) => {
             <p
               className="productdisplay-left-category"
               onClick={() => {
-                addToCart(product.id);
+                addToCart(product?.id);
               }}
             >
               <img

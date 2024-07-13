@@ -23,7 +23,7 @@ export const Item = (props) => {
         </div>
       </Link>
       <p className="item-name">{name}</p>
-      <p className="item-location">{location}</p>
+      <p className="item-location">From {location}</p>
       <div className="productdisplay-right-stars">
         <img src={star_icon} alt="" />
         <img src={star_icon} alt="" />
