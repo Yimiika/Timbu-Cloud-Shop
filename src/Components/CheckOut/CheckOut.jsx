@@ -1,18 +1,22 @@
 import React from "react";
 import "./CheckOut.css";
 import { useNavigate } from "react-router-dom";
+import payment_icon from "../Assets/payment_icon.svg";
 
 export const CheckOut = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
-    navigate("/");
+    navigate("/cart");
   };
   return (
     <div className="checkout">
       <h2>Payment</h2>
       <div className="payment-method">
-        <p>Payment options</p>
+        <p>
+          Payment options{" "}
+          <img src={payment_icon} alt="" className="payment-icon" />
+        </p>
       </div>
       <div className="card-details">
         <p>Card Number</p>

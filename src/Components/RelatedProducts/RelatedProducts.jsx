@@ -18,6 +18,12 @@ export const RelatedProducts = () => {
       <h1>You may also like</h1>
       <div className="relatedproducts-item">
         {relatedProduct.map((item, i) => {
+          const oldPrice = item.current_price[0].NGN[0];
+          const newPrice = item.current_price[0].NGN[1];
+          const discount = oldPrice
+            ? Math.round(((oldPrice - newPrice) / oldPrice) * 100)
+            : 0;
+
           return (
             <Item
               key={i}
@@ -25,9 +31,10 @@ export const RelatedProducts = () => {
               name={item.name}
               image={`https://api.timbu.cloud/images/${item.photos[2].url}`}
               location={item.categories[0].name}
-              new_price={item.current_price[0].NGN[1]}
-              old_price={item.current_price[0].NGN[0]}
-              discount={item.discount}
+              new_price={newPrice}
+              old_price={oldPrice}
+              discount={discount}
+              unique_id={item.unique_id}
             />
           );
         })}

@@ -6,9 +6,16 @@ import star_icon from "../Assets/solid_star.svg";
 import star_dull_icon from "../Assets/clear_star.svg";
 
 export const Item = (props) => {
-  const discount =
-    props.discount !== undefined ? Math.round(props.discount) : 0;
-  const { id, name, image, location, new_price, old_price } = props;
+  const {
+    id,
+    name,
+    image,
+    location,
+    new_price,
+    old_price,
+    discount,
+    unique_id,
+  } = props;
   const { addToCart } = useContext(ShopContext);
 
   const handleAddToCart = () => {
@@ -30,7 +37,7 @@ export const Item = (props) => {
         <img src={star_icon} alt="" />
         <img src={star_icon} alt="" />
         <img src={star_dull_icon} alt="" />
-        <p>(122)</p>
+        <p>({unique_id})</p>
       </div>
       <div className="item-prices">
         <div className="item-price-new">N{new_price}</div>

@@ -12,12 +12,22 @@
 }
 
 .payment-method {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--Foundation-Base-B10, #fafafb);
+  height: 33px;
 }
 
 .payment-method p {
-  margin-bottom: 10px;
+  margin: 0;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.payment-icon {
+  margin-left: 5px;
 }
 
 .payment-options {
@@ -26,7 +36,9 @@
   gap: 8px;
   justify-content: flex-start;
 }
-
+.payment-icon {
+  align-items: center;
+}
 .payment-options label {
   color: var(--Foundation-Base-B100, #83758b);
   font-size: 14px;

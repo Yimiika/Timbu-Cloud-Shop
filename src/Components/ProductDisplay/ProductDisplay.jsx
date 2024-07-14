@@ -8,8 +8,11 @@ import cart_small_icon from "../Assets/cart_small_icon.svg";
 export const ProductDisplay = (props) => {
   const { product } = props;
   console.log("log", product);
-  const discount =
-    props.discount !== undefined ? Math.round(props.discount) : 0;
+  const oldPrice = product?.current_price;
+  const newPrice = product?.discounted_price;
+  const discount = oldPrice
+    ? Math.round(((oldPrice - newPrice) / oldPrice) * 100)
+    : 0;
   const { addToCart } = useContext(ShopContext);
   return (
     <div className="productdisplay">
@@ -83,29 +86,14 @@ export const ProductDisplay = (props) => {
       <div className="productdisplay-right">
         <div className="descriptionbox-title">Sure Fit</div>
         <div className="descriptionbox-description">
-          <p>
-            Transform your look with our bold red jacket, designed to capture
-            attention and exude confidence. This chic and versatile piece
-            combines modern elegance with unmatched comfort, making it the
-            perfect addition to any wardrobe. Whether you're dressing up for a
-            night out or adding a pop of color to your everyday style, our red
-            jacket ensures you stand out with sophistication and ease. Don't
-            miss out on this must-have fashion statement.
-          </p>
+          <p>{product?.description}</p>
           <hr />
-          <p>
-            Copy Transform your look with our bold red jacket, designed to
-            capture attention and exude confidence. This chic and versatile
-            piece combines modern elegance with unmatched comfort, making it the
-            perfect addition to any wardrobe. Whether you're dressing up for a
-            night out or adding a pop of color to your everyday style, our red
-            jacket ensures you stand out with sophistication and ease.
-          </p>
+          <p>{product?.description}</p>
           <h3>Why You Should Buy:</h3>
           <p>
             <ul>
               <li>
-                - Eye-Catching Design: The vibrant red hue is perfect for making
+                - Eye-Catching Design: The {product?.name} is perfect for making
                 a bold fashion statement.
               </li>
               <li>
@@ -130,7 +118,7 @@ export const ProductDisplay = (props) => {
               </li>
             </ul>
           </p>
-          <p>
+          <p className="productdisplay-tagline">
             Don't miss out on this must-have fashion statement. Shop Now and
             Transform Your Wardrobe!
           </p>

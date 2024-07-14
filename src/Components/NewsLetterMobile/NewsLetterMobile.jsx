@@ -9,9 +9,9 @@ export const NewsLetterMobile = () => {
       <p>Fear Of Missing Out? Get the latest deals, updates and more</p>
       <div className="enter-newsletter">
         <input className="newletter-mobile" type="text" />
-        <div className="newsletter-icon">
+        <button className="newsletter-icon">
           <img src={arrow_icon} alt="" />
-        </div>
+        </button>
       </div>
     </div>
   );
