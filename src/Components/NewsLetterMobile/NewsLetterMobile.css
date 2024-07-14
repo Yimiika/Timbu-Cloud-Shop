@@ -75,6 +75,10 @@
     cursor: pointer;
     background: #9c0001;
     border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
     border: none;
     height: 60%;
     aspect-ratio: 1;
