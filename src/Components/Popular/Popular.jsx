@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import "./Popular.css";
 import { Item } from "../Items/Item";
 import Axios from "axios";
+import { Pagination } from "../Pagination/Pagination";
 
-export const Popular = () => {
+export const Popular = forwardRef((props, ref) => {
   const [dataProduct, setDataProduct] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(12);
 
   useEffect(() => {
     Axios.get(
@@ -15,26 +18,39 @@ export const Popular = () => {
     });
   }, []);
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = dataProduct.slice(firstPostIndex, lastPostIndex);
+
   return (
-    <div className="popular">
+    <div ref={ref} className="popular">
       <h1>Our Products</h1>
       <div className="popular-item">
-        {dataProduct.map((item, i) => {
-          return (
-            <Item
-              key={i}
-              id={item.id}
-              name={item.name}
-              image={`https://api.timbu.cloud/images/${item.photos[2].url}`}
-              location={item.categories[0].name}
-              new_price={item.current_price[0].NGN[1]}
-              old_price={item.current_price[0].NGN[0]}
-              discount={item.discount}
-            />
-          );
-        })}
+        {currentPosts.map((item, i) => (
+          <Item
+            key={i}
+            id={item.id}
+            name={item.name}
+            image={`https://api.timbu.cloud/images/${item.photos[2].url}`}
+            location={item.categories[0].name}
+            new_price={item.current_price[0].NGN[1]}
+            old_price={item.current_price[0].NGN[0]}
+            discount={item.discount}
+          />
+        ))}
       </div>
       <hr />
+      <Pagination
+        totalPosts={dataProduct.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={handlePageChange}
+        currentPage={currentPage}
+      />
     </div>
   );
-};
+});

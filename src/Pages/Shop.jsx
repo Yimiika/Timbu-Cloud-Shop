@@ -13,7 +13,7 @@ export const Shop = () => {
     <>
       <Hero scrollToProducts={scrollToProducts} />
       <div ref={productsRef}>
-        <Popular />
+        <Popular ref={productsRef} />
       </div>
     </>
   );

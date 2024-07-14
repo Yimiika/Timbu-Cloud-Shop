@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 30px;
+}
+.pagination button {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 5px 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--Foundation-Base-B100, #83758b);
+  background: #fff;
+}
+
+.pagination button.active {
+  background: #972222;
+}
