@@ -12,7 +12,7 @@ export const Product = () => {
 
   useEffect(() => {
     Axios.get(
-      `/api/products/${productId}?organization_id=97e320789817409eaf738cd1d86b6e91&Appid=IGZXARZAX5DMCMM&Apikey=28d4ecd5638545c6bc09300264d8baf920240712133124500163`
+      `https://api.timbu.cloud/products/${productId}?organization_id=97e320789817409eaf738cd1d86b6e91&Appid=IGZXARZAX5DMCMM&Apikey=28d4ecd5638545c6bc09300264d8baf920240712133124500163`
     ).then((res) => {
       setProduct(res.data);
     });
